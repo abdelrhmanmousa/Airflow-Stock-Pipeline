@@ -1,0 +1,15 @@
+# Astro Runtime includes the following pre-installed providers packages: https://www.astronomer.io/docs/astro/runtime-image-architecture#provider-packages
+
+astro-sdk-python>=1.8.0
+
+# Docker provider for the DockerOperator
+apache-airflow-providers-docker>=3.9.0
+
+# MinIO provider and client library
+
+minio>=7.2.0
+
+
+
+
+
