@@ -2,11 +2,11 @@ This project demonstrates a modern, end-to-end ETL/ELT data pipeline built with 
 The entire environment is containerized with Docker and managed using the Astro CLI for easy development and deployment.
 
 ## **Key Features**
-   # Automated ETL/ELT: Fully orchestrated workflows managed by Airflow.
-   # Scalable Data Processing: Leverages Apache Spark for large-scale, distributed data transformations.
-   # Data Lake Architecture: Uses MinIO to store raw and processed data, decoupling storage from compute.
-   # Containerized Environment: All services (Airflow, Spark, PostgreSQL, MinIO) run in Docker for consistency and portability.
-   # BI & Visualization: Connects to Metabase for creating insightful dashboards.
+    Automated ETL/ELT: Fully orchestrated workflows managed by Airflow.
+    Scalable Data Processing: Leverages Apache Spark for large-scale, distributed data transformations.
+    Data Lake Architecture: Uses MinIO to store raw and processed data, decoupling storage from compute.
+    Containerized Environment: All services (Airflow, Spark, PostgreSQL, MinIO) run in Docker for consistency and portability.
+    BI & Visualization: Connects to Metabase for creating insightful dashboards.
 ## **Architecture**
 The diagram below illustrates the flow of data from the source API through the various components of the pipeline to the final dashboard.
 ![Pipeline's Architecture](Architecture/Airflow_Arch_Project.png)
@@ -32,18 +32,17 @@ The DAG stock_market executes the following sequence of tasks:
 
 ## **Getting Started**
 Follow these instructions to set up and run the project on your local machine.
- # Prerequisites
+  Prerequisites
  Docker Desktop: Ensure it is installed and running with at least 8GB of memory allocated.
  Astro CLI: Install the Astro CLI by following the official documentation.
- # Installation & Setup
+  Installation & Setup
  Clone the Repository
-code
+
 Bash
 git clone https://github.com/abdelrhmanmousa/Airflow-Stock-Pipeline.git
 cd Airflow-Stock-Pipeline
 Start the Astro Environment
 This command will build and start all the services defined in docker-compose.override.yml, including Airflow, Spark, MinIO, and PostgreSQL.
-code
 Bash
 astro dev start
 Note: The first time you run this, it may take several minutes to download all the Docker images.
