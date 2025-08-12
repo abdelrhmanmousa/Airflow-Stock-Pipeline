@@ -4,7 +4,6 @@ from airflow.hooks.base import BaseHook
 from stock_market.tasks import get_stock_prices , store_prices , get_formated_prices , bucket_name
 from airflow.operators.python import PythonOperator
 from airflow.providers.docker.operators.docker import DockerOperator
-
 from airflow.providers.slack.notifications.slack import SlackNotifier
 from astro import sql as aql
 from astro.files import File
@@ -19,6 +18,15 @@ SYMBOL = 'NVDA'
     start_date = datetime(2025, 8, 5),
     schedule_interval='@daily',
     tags = ['stock_market'],
+    catchup = False ,
+    on_success_callback=SlackNotifier(
+        slack_conn_id='Slack',
+        text='Stock Market DAG completed successfully!'
+    ),
+    on_failure_callback=SlackNotifier(
+        slack_conn_id='Slack',  
+        text='Stock Market DAG failed!'
+    )
     catchup = False ,
     on_success_callback=SlackNotifier(
         slack_conn_id='Slack',
