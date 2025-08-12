@@ -4,6 +4,7 @@ from airflow.hooks.base import BaseHook
 from stock_market.tasks import get_stock_prices , store_prices , get_formated_prices , bucket_name
 from airflow.operators.python import PythonOperator
 from airflow.providers.docker.operators.docker import DockerOperator
+
 from airflow.providers.slack.notifications.slack import SlackNotifier
 from astro import sql as aql
 from astro.files import File
