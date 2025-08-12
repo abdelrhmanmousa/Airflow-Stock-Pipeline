@@ -28,15 +28,7 @@ SYMBOL = 'NVDA'
         slack_conn_id='Slack',  
         text='Stock Market DAG failed!'
     )
-    catchup = False ,
-    on_success_callback=SlackNotifier(
-        slack_conn_id='Slack',
-        text='Stock Market DAG completed successfully!'
-    ),
-    on_failure_callback=SlackNotifier(
-        slack_conn_id='Slack',  
-        text='Stock Market DAG failed!'
-    )
+   
 )
 
 def stock_market():
