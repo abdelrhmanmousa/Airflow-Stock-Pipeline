@@ -9,7 +9,8 @@ apache-airflow-providers-docker>=3.9.0
 
 minio>=7.2.0
 
-
+#Slack providers 
+apache-airflow-providers-slack==8.1.0
 
 
 
